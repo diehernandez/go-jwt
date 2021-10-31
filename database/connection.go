@@ -8,8 +8,8 @@ import (
 
 var DB *gorm.DB
 
-func Connect() {
-	connection, err := gorm.Open(mysql.Open("diehernandez:pepito.p0@tcp(host.docker.internal:3306)/auth"), &gorm.Config{})
+func Connect(conUrl *string) {
+	connection, err := gorm.Open(mysql.Open(*conUrl), &gorm.Config{})
 
 	if err != nil {
 		panic(err)

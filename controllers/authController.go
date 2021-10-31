@@ -11,7 +11,8 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-const SecretKey = "secret"
+//TODO: Set this secret with env variable
+const SecretKey = "Secret"
 
 func Register(c *fiber.Ctx) error {
 
